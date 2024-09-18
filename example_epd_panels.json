@@ -1,0 +1,49 @@
+{
+    "dataset": {
+        "type": "single",
+        "extension": "xdmf",
+        "xdmf_folder": "dataset/PANELS_DATASET/20k",
+        "meta_path": "dataset/PANELS_DATASET/20k_meta.json"
+    },
+    "model": {
+        "type": "epd",
+        "message_passing_num": 15,
+        "node_input_size": 4,
+        "output_size": 4,
+        "edge_input_size": 4
+    },
+    "index": {
+        "feature_index_start": 0,
+        "feature_index_end": 4,
+        "output_index_start": 0,
+        "output_index_end": 4,
+        "node_type_index": 4
+    },
+    "node_features_mapping": {
+        "velocity_x": 0,
+        "velocity_y": 1,
+        "velocity_z": 2,
+        "lift_field": 3
+    },
+    "saving_frequency": 1,
+    "optimizer": "adam",
+    "lr": {
+        "init_lr": 0.0001,
+        "end_lr": 0.000001,
+        "init_decay_step": 20000,
+        "decay_rate": 0.1
+    },
+    "batch_size": 2,
+    "num_workers": 0,
+    "tensorboard_path": "runs/SP20k_1_traj_BS=2",
+    "transformations": {
+        "augmentation": {
+            "v_flip": 0,
+            "h_flip": 0
+        },
+        "preprocessing": {
+            "noise": 0.02,
+            "masking": 0
+        }
+    }
+}

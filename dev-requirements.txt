@@ -1,0 +1,11 @@
+loguru==0.7.2
+autoflake==2.3.0
+pytest==8.0.1
+meshio==5.3.5
+tensorflow==2.15.0
+h5py==3.10.0
+tqdm==4.66.2
+torch==2.2.1
+torch_geometric==2.5.0
+pytest-benchmark==4.0.0
+torch-cluster==1.6.3
